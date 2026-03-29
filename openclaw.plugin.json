@@ -1,0 +1,70 @@
+{
+  "id": "baidu-search",
+  "name": "Baidu Search Provider",
+  "version": "1.0.0",
+  "description": "Baidu search provider for OpenClaw with API and Crawler modes",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "mode": {
+        "type": "string",
+        "enum": ["api", "crawler", "auto"],
+        "default": "auto",
+        "description": "搜索模式: api=API模式, crawler=爬虫模式, auto=自动选择"
+      },
+      "apiKey": {
+        "type": "string",
+        "description": "百度千帆 API Key（API 模式必需）"
+      },
+      "timeout": {
+        "type": "number",
+        "description": "请求超时时间（秒）",
+        "default": 30,
+        "minimum": 5,
+        "maximum": 120
+      },
+      "retryCount": {
+        "type": "number",
+        "description": "失败重试次数",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 5
+      },
+      "fallbackEnabled": {
+        "type": "boolean",
+        "description": "是否启用模式降级",
+        "default": true
+      },
+      "crawler": {
+        "type": "object",
+        "description": "爬虫模式配置",
+        "properties": {
+          "userAgent": {
+            "type": "string",
+            "description": "自定义 User-Agent"
+          },
+          "minInterval": {
+            "type": "number",
+            "description": "最小请求间隔（毫秒）",
+            "default": 1000,
+            "minimum": 0
+          },
+          "resolveRedirects": {
+            "type": "boolean",
+            "description": "是否解析重定向 URL",
+            "default": false
+          },
+          "proxyUrl": {
+            "type": "string",
+            "description": "代理服务器 URL"
+          }
+        }
+      },
+      "hookEnabled": {
+        "type": "boolean",
+        "description": "是否启用 Agent 引导 Hook",
+        "default": true
+      }
+    }
+  }
+}

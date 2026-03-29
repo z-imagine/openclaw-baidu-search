@@ -1,0 +1,72 @@
+{
+  "name": "@z-imagine/openclaw-baidu-search",
+  "version": "1.0.0",
+  "description": "Baidu search provider for OpenClaw with API and Crawler modes",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "openclaw": {
+    "extensions": ["./dist/index.js"],
+    "compat": {
+      "pluginApi": "^2026.3.24"
+    },
+    "build": {
+      "openclawVersion": "2026.3.24"
+    }
+  },
+  "scripts": {
+    "build": "tsup index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup index.ts --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/ index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest --coverage",
+    "pack:check": "npm pack --dry-run",
+    "pack:release": "npm pack",
+    "clean": "rm -rf dist node_modules",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "search",
+    "baidu",
+    "chinese",
+    "crawler"
+  ],
+  "author": "",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "openclaw.plugin.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "dotenv": "^17.3.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.32.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openclaw/baidu-search.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openclaw/baidu-search/issues"
+  },
+  "homepage": "https://github.com/openclaw/baidu-search#readme"
+}

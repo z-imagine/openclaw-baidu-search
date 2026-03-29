@@ -1,0 +1,11 @@
+.env
+.env.*
+node_modules
+src
+coverage
+*.log
+*.tsbuildinfo
+test-standalone.ts
+TESTING.md
+tsconfig.json
+pnpm-lock.yaml
