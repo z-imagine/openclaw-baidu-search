@@ -1,7 +1,7 @@
 {
   "name": "@z-imagine/openclaw-baidu-search",
-  "version": "1.0.1",
-  "description": "Baidu search provider for OpenClaw with API and Crawler modes",
+  "version": "1.0.2",
+  "description": "China-friendly Baidu search plugin for OpenClaw",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -25,8 +25,13 @@
     "pack:check": "npm pack --dry-run",
     "pack:release": "npm pack",
     "pack:clawhub": "sh ./scripts/pack-clawhub.sh",
+    "publish:github": "sh ./scripts/publish-github.sh",
     "publish:clawhub": "sh ./scripts/publish-clawhub.sh",
     "publish:npm": "sh ./scripts/publish-npm.sh",
+    "release:github": "sh ./scripts/release.sh github",
+    "release:npm": "sh ./scripts/release.sh npm",
+    "release:clawhub": "sh ./scripts/release.sh clawhub",
+    "release:all": "sh ./scripts/release.sh all",
     "clean": "rm -rf dist node_modules",
     "prepublishOnly": "pnpm run build"
   },
@@ -66,10 +71,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/openclaw/baidu-search.git"
+    "url": "https://github.com/z-imagine/openclaw-baidu-search.git"
   },
   "bugs": {
-    "url": "https://github.com/openclaw/baidu-search/issues"
+    "url": "https://github.com/z-imagine/openclaw-baidu-search/issues"
   },
-  "homepage": "https://github.com/openclaw/baidu-search#readme"
+  "homepage": "https://github.com/z-imagine/openclaw-baidu-search#readme"
 }

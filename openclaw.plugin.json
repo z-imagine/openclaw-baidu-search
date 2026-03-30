@@ -1,8 +1,8 @@
 {
   "id": "baidu-search",
   "name": "Baidu Search Provider",
-  "version": "1.0.1",
-  "description": "Baidu search provider for OpenClaw with API and Crawler modes",
+  "version": "1.0.2",
+  "description": "China-friendly Baidu search plugin for OpenClaw",
   "configSchema": {
     "type": "object",
     "properties": {
