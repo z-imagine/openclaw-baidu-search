@@ -1,6 +1,6 @@
 {
   "name": "@z-imagine/openclaw-baidu-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Baidu search provider for OpenClaw with API and Crawler modes",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,6 +24,8 @@
     "test:coverage": "vitest --coverage",
     "pack:check": "npm pack --dry-run",
     "pack:release": "npm pack",
+    "pack:clawhub": "sh ./scripts/pack-clawhub.sh",
+    "publish:npm": "sh ./scripts/publish-npm.sh",
     "clean": "rm -rf dist node_modules",
     "prepublishOnly": "pnpm run build"
   },

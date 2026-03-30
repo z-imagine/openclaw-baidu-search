@@ -26,7 +26,7 @@ For English/international queries, use web_search instead.`;
 const plugin: OpenClawPluginDefinition = {
   id: "baidu-search",
   name: "Baidu Search Provider",
-  version: "1.0.0",
+  version: "1.0.1",
   description: "Baidu search provider for OpenClaw with API and Crawler modes",
 
   register(api: OpenClawPluginApi) {
